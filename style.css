@@ -338,13 +338,20 @@ body {
     z-index: 2;
     top: 0%;
     left: 0%;
-    width: 90vw;
-    height: 80vh;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    line-height: 10vh;
-    font-size: 3vw;
+    font-size: 5vh;
     background-color: green;
   }
+
+  #winMassage,
+  #scoreMassage {
+    height: 25%;
+    width: 100%;
+    font-size: inherit;
+  }
+
   .lowFooter {
     width: 100%;
     height: 18%;
