@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1 id="header">Name country with flag:</h1>
+    <div class="game">
+      <audio id="audio" src="music.mp3"></audio>
+      <button class="musicButton" onclick="playPause()">
+        <i
+          id="buttonState"
+          class="fa-sharp fa-solid fa-volume-xmark"
+        ></i></button
+      ><!-- this button is for contolling music-->
+      <div class="win">
+        <h1 id="winMassage">there</h1>
+        <h1 id="scoreMassage">here</h1>
+        <button class="reset">Reset</button>
+      </div>
+      <!--this div is only displayed when game is won or lose-->
+      <div class="answer">
+        <div></div>
+        <div id="flag"></div>
+        <div id="answervalue"></div>
+      </div>
+      <label class="userInput"
+        ><input
+          type="text"
+          class="userGuess"
+          placeholder="type here"
+          name="name"
+      /></label>
+      <div class="footer">
+        <div class="footerdiv"></div>
+        <button class="check footerdiv">Check!</button>
+        <div class="score footerdiv">Score = 3</div>
+      </div>
+      <div class="lowFooter">
+        <button class="reset">Reset</button>
+        <div></div>
+        <button class="next">Next</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

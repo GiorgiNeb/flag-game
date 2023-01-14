@@ -1,0 +1,372 @@
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background-color: rgb(105, 133, 175);
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .musicButton {
+    position: absolute;
+    z-index: 3;
+    top: 15vh;
+    left: 5vh;
+    height: 6vh;
+    width: 10vw;
+    font-size: 4vw;
+    background-color: blue;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #header {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 0.7em;
+    padding: 0 auto;
+    font-size: 1.2em;
+  }
+  h1 {
+    text-align: center;
+    padding-top: 1em;
+    font-size: 2em;
+  }
+
+  .game {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    height: 75vh;
+    background-color: blueviolet;
+    border-radius: 0.5em;
+  }
+  .userInput {
+    height: 10%;
+    width: 100%;
+  }
+
+  .userGuess {
+    height: 100%;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: rgb(193, 102, 102);
+    text-align: center;
+    font-size: 3vw;
+  }
+
+  label {
+    display: block;
+  }
+
+  .answer {
+    height: 45%;
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+  }
+
+  .answer > div {
+    width: 25%;
+    height: 100%;
+    margin: 0 2%;
+  }
+
+  #flag {
+    width: 60%;
+    padding: 0;
+    text-align: center;
+    font-size: 8vw;
+    font-weight: 900;
+    color: rgb(109, 45, 45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: no-repeat center center;
+    cursor: not-allowed;
+    border-radius: 5px;
+    background-size: 100% auto;
+    background-image: url("images//georgia.png");
+  }
+
+  #answervalue {
+    font-size: 3.5vw;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+  .check {
+    display: inline;
+    width: 20%;
+    height: 80%;
+    background-color: rgb(51, 20, 20);
+    color: white;
+    font-weight: bold;
+    font-size: 3vw;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .next {
+    display: none;
+    height: 50%;
+    width: 20%;
+    max-width: 170px;
+    margin-right: 7%;
+    height: 60%;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .score {
+    background-color: rgb(102, 214, 190);
+    height: 80%;
+    float: right;
+    line-height: 100%;
+    font-size: 3vw;
+    text-align: center;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10%;
+  }
+
+  .footerdiv {
+    width: 20%;
+  }
+
+  .win {
+    display: none;
+    z-index: 2;
+    top: 0%;
+    left: 0%;
+    width: 90vw;
+    height: 70vh;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 3vw;
+    background-color: green;
+  }
+  .lowFooter {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .reset {
+    width: 20%;
+    height: 50px;
+    background-color: rgb(51, 20, 20);
+    color: white;
+    font-weight: bold;
+    font-size: 3vw;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5vh;
+  }
+
+  .lowFooter > .reset {
+    height: 50%;
+    margin-left: 7%;
+    margin-top: 0 !important;
+    background-color: blue;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .musicButton {
+    position: absolute;
+    z-index: 3;
+    top: 20vh;
+    left: 10vh;
+    height: 10vh;
+    width: 10vw;
+    font-size: 3vw;
+    background-color: blue;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #header {
+    text-align: center;
+    padding: 0.7em;
+    font-size: 2em;
+  }
+  h1 {
+    text-align: center;
+    padding-top: 1em;
+    font-size: 2em;
+  }
+
+  .game {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    height: 75vh;
+    background-color: blueviolet;
+    border-radius: 0.5em;
+  }
+  .userInput {
+    height: 10%;
+    width: 100%;
+  }
+
+  .userGuess {
+    height: 100%;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: rgb(193, 102, 102);
+    text-align: center;
+    font-size: 3vw;
+  }
+
+  label {
+    display: block;
+  }
+
+  .answer {
+    height: 45%;
+    margin: 0 0 40px 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+  }
+
+  .answer > div {
+    width: 25%;
+    height: 100%;
+    margin: 0 2%;
+  }
+
+  #flag {
+    padding: 0;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 900;
+    color: rgb(109, 45, 45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: no-repeat center center;
+    cursor: not-allowed;
+    border-radius: 5px;
+    background-size: 100% auto;
+    background-image: url("images//georgia.png");
+  }
+
+  #answervalue {
+    font-size: 3vw;
+    line-height: 60px;
+    color: rgb(5, 55, 5);
+    font-weight: 900;
+  }
+
+  .check {
+    display: inline;
+    width: 20%;
+    height: 80%;
+    background-color: rgb(51, 20, 20);
+    color: white;
+    font-weight: bold;
+    font-size: 3vw;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .next {
+    display: none;
+    width: 20%;
+    max-width: 170px;
+    margin-right: 7%;
+    height: 60%;
+    font-weight: bold;
+    font-size: 2em;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .score {
+    background-color: rgb(102, 214, 190);
+    height: 80%;
+    float: right;
+    line-height: 100%;
+    font-size: 3vw;
+    text-align: center;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 15%;
+  }
+
+  .footerdiv {
+    width: 20%;
+  }
+
+  .win {
+    display: none;
+    z-index: 2;
+    top: 0%;
+    left: 0%;
+    width: 90vw;
+    height: 80vh;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 3vw;
+    background-color: green;
+  }
+  .lowFooter {
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .reset {
+    width: 20%;
+    height: 50px;
+    background-color: rgb(51, 20, 20);
+    color: white;
+    font-weight: bold;
+    font-size: 3vw;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5vh;
+  }
+
+  .lowFooter > .reset {
+    margin-left: 7%;
+    margin-top: 0 !important;
+    background-color: blue;
+  }
+}
